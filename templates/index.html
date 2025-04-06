@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Job Screening System</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Job Screening System</h1>
+            <p>Streamline your recruitment process with AI and Data Intelligence.</p>
+        </header>
+
+        <section class="form-section">
+            <h2>Add Job Description</h2>
+            <form id="jobForm">
+                <input type="text" id="jobTitle" placeholder="Job Title" required>
+                <textarea id="jobDescription" placeholder="Job Description" required></textarea>
+                <button type="submit">Add Job</button>
+            </form>
+        </section>
+
+        <section class="form-section">
+            <h2>Add Candidate</h2>
+            <form id="candidateForm">
+                <input type="text" id="candidateName" placeholder="Candidate Name" required>
+                <input type="file" id="candidateCV" accept=".pdf,.doc,.docx" required>
+                <button type="submit">Upload CV</button>
+            </form>
+        </section>
+
+        <section class="form-section">
+            <h2>Match Candidates</h2>
+            <button id="matchButton">Match Candidates</button>
+            <div id="matchResults"></div>
+        </section>
+
+        <section class="form-section">
+            <h2>Extracted Keywords</h2>
+            <div id="keywordResults"></div>
+        </section>
+    </div>
+
+</body>
+</html>
